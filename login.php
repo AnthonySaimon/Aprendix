@@ -1,50 +1,37 @@
-<!DOCTYPE html>
-<html>
+<?php
+// Conexão com o banco de dados
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "aprendix";
 
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='login.css'>
-    <script src='main.js'></script>
-</head>
+// Criar conexão
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-<body>
-    <div class="container">
-        <div class="panel">
-            <h2>Login</h2>
-            <form method="POST" action="logar.php">
-                <label for="email">Nome:</label>
-                <input type="text" id="email" name="email" required>
+// Verificar conexão
+if ($conn->connect_error) {
+    die("Erro de conexão: " . $conn->connect_error);
+}
 
-                <label for="password">Senha:</label>
-                <input type="password" id="password" name="password" required>
+$email = $_POST['username'];
+$senha = $_POST['password'];
 
-                <button class="logar1" type="submit">Logar</button>
-            </form>
-            <div class="extra">
-                <p>Não possui uma conta? <a class="link" href="./cadastrar/cadastro.html">Cadastrar</a></p>
-             
-                    <?php
-                    // Mostra mensagem de erro, se houver
-                    if (isset($_GET['erro'])) {
-                        $erro = $_GET['erro'];
-                        if ($erro == 1) {
-                            echo  '<p>Senha incorreta </p>';
-                        } elseif ($erro == 2) {
-                            echo '<p>Email não encontrado.</p>';
-                        }
-                    }
-                    ?>
-              
+// Consulta SQL para verificar o login
+$sql = "SELECT * FROM usuario WHERE email = '$email'";
+$result = $conn->query($sql);
 
-            </div>
-        </div>
-    </div>
-    </div>
-    </div>
+if ($result->num_rows == 1) {
+    $row = $result->fetch_assoc();
+    if ($senha === $row['senha']) { // Verificar a senha sem criptografia
+        // Redirecionar para a página de sucesso
+        header("Location: ./home/index.html");
+        exit();
+    } else {
+        header("Location: index.php?erro=1");
+    }
+} else {
+    header("Location: index.php?erro=2");
+}
 
-</body>
-
-</html>
+$conn->close();
+?>
