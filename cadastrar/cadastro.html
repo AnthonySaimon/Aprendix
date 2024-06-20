@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tela de Cadastro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='cadastro.css'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel">
+            <h2>Cadastro</h2>
+            <form method="POST" action="../login.html">
+
+                <div id="nome">
+                    <div>
+                        <label for="fullname">Nome:</label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+                    <div>
+                        <label for="leftname">Sobrenome:</label>
+                        <input type="text" id="leftname" name="leftname" required>
+                    </div>
+
+                </div>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+
+                <button class="logar1" type="submit">Cadastrar</button>
+            </form>
+            <br>
+           <a href="../login.html"> <button class="exit-btn">Cancelar</button> </a>
+        </div>
+    </div>
+</body>
+
+</html>
