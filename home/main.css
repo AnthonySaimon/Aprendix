@@ -1,27 +1,30 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier Gothic', sans-serif;
 }
-body{
+
+body {
     background-color: antiquewhite;
     height: 100vh;
 }
-.menu-nav{
-position: relative;
-top: 1px;
-width: 100%;
-height: 80px;
-background-color: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem;
-box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
+
+.menu-nav {
+    position: relative;
+    top: 1px;
+    width: 100%;
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
 }
+
 /* logo */
-.menu-nav .menutoggle{
+.menu-nav .menutoggle {
     position: relative;
     width: 50px;
     height: 50px;
@@ -30,7 +33,7 @@ box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
 }
 
 
-.menu-nav .perfil{
+.menu-nav .perfil {
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -38,24 +41,28 @@ box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
     cursor: pointer;
     user-select: none;
 }
-.menu-nav .perfil h3{
+
+.menu-nav .perfil h3 {
     text-align: end;
     font-weight: 500;
     line-height: 1rem;
     color: #555;
 }
-.menu-nav .perfil h3 samp{
+
+.menu-nav .perfil h3 samp {
     font-size: .75rem;
     color: #777;
 }
-.menu-nav .perfil .imgcx{
+
+.menu-nav .perfil .imgcx {
     position: relative;
     width: 50px;
     height: 50px;
     overflow: hidden;
     border-radius: 50%;
 }
-.menu-nav .perfil .imgcx img{
+
+.menu-nav .perfil .imgcx img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -63,10 +70,11 @@ box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
     left: 0;
     object-fit: cover;
 }
-.menu-nav .menu{
+
+.menu-nav .menu {
     position: absolute;
     top: calc(100% + 30px);
-    right: 0; 
+    right: 0;
     width: 200px;
     min-height: 100px;
     background-color: white;
@@ -77,12 +85,12 @@ box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
     transition: .20s;
 }
 
-.menu-nav .menu.ativo{
+.menu-nav .menu.ativo {
     opacity: 1;
     visibility: visible;
 }
 
-.menu-nav .menu::before{
+.menu-nav .menu::before {
     content: '';
     position: absolute;
     top: -10px;
@@ -93,64 +101,75 @@ box-shadow: 0 50px 50px rgba(0, 0, 0 .1);
     background-color: white;
     transform: rotate(45deg);
 }
-.menu-nav .menu ul{
+
+.menu-nav .menu ul {
     display: flex;
     flex-direction: column;
     background-color: #fff;
     list-style: none;
 }
-.menu-nav .menu ul li{
+
+.menu-nav .menu ul li {
     padding: 15px 20px;
     background: #fff;
     transition: .30s;
 }
-.menu-nav .menu ul li:hover{
+
+.menu-nav .menu ul li:hover {
     background: #f5f5f5;
     transition: .0s;
 }
-.menu-nav .menu ul li a{
-text-decoration: none;
-color: #666;
-display: flex;
-align-items: center;
-gap: 10px;
+
+.menu-nav .menu ul li a {
+    text-decoration: none;
+    color: #666;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
-.menu-nav .menu ul li a ion-icon{
+
+.menu-nav .menu ul li a ion-icon {
     font-size: 1.25rem;
     color: #999;
 }
 
 /* Carrosel de imagem */
-.slider{
+.slider {
     margin: 3rem auto;
     width: 80rem;
     height: 40rem;
     overflow: hidden;
 }
-.slides{
+
+.slides {
     width: 400%;
     height: 40rem;
     display: flex;
 }
-.slides input{
+
+.slides input {
     display: none;
 }
-.slide{
+
+.slide {
     width: 25%;
     position: relative;
     transition: 2s;
 }
-.slide img{
+
+.slide img {
     width: 80rem;
 }
-.manual-navigation{
+
+.manual-navigation {
     position: absolute;
     width: 80rem;
     margin-top: -38rem;
     display: flex;
     justify-content: center;
 }
-.manual-btn{
+
+.manual-btn {
     border: 2px solid #fff;
     padding: 5px;
     border-radius: 10px;
@@ -158,51 +177,118 @@ gap: 10px;
     transition: 0.20s;
     margin-top: 36rem;
 }
-.manual-btn:not(:last-child){
+
+.manual-btn:not(:last-child) {
     margin-right: 40px;
 }
-.manual-btn:hover{
+
+.manual-btn:hover {
     background-color: #fff;
 }
 
-#radio1:checked ~ .first{
+#radio1:checked~.first {
     margin-left: 0;
 }
-#radio2:checked ~ .first{
+
+#radio2:checked~.first {
     margin-left: -25%;
 }
-#radio3:checked ~ .first{
+
+#radio3:checked~.first {
     margin-left: -50%;
 }
-#radio4:checked ~ .first{
+
+#radio4:checked~.first {
     margin-left: -75%;
 }
-.navigation-auto div{
+
+.navigation-auto div {
     border: 2px solid #20a6ff;
     padding: 5px;
     border-radius: 10px;
     cursor: pointer;
-    transition: 1s; 
+    transition: 1s;
 }
-.navigation-auto{
+
+.navigation-auto {
     position: absolute;
     width: 80rem;
     margin-top: 38rem;
     display: flex;
     justify-content: center;
 }
-.navigation-auto div:not(:last-child){
+
+.navigation-auto div:not(:last-child) {
     margin-right: 40px;
 }
-#radio1:checked ~.navigation-auto .auto-btn1{
+
+#radio1:checked~.navigation-auto .auto-btn1 {
     background-color: #fff;
 }
-#radio2:checked ~.navigation-auto .auto-btn2{
+
+#radio2:checked~.navigation-auto .auto-btn2 {
     background-color: #fff;
 }
-#radio3:checked ~.navigation-auto .auto-btn3{
+
+#radio3:checked~.navigation-auto .auto-btn3 {
     background-color: #fff;
 }
-#radio4:checked ~.navigation-auto .auto-btn4{
+
+#radio4:checked~.navigation-auto .auto-btn4 {
     background-color: #fff;
+}
+
+.abacusos {
+    padding: 2%;
+    width: 100%;
+    height: 22rem;
+}
+
+.abacusos .nome h2 {
+    background-color: #999;
+    width: 5.5%;
+    padding: 0.5%;
+    border-radius: 15px;
+}
+
+.cusos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.abacusos .cusos {
+    width: 100%;
+    height: 80%;
+    padding: 1%;
+}
+.elemento{
+    display: flex;
+}
+.abacusos .cusos .elemento {
+    width: 20rem;
+    height: 12rem;
+    border-radius: 15px;
+    background-color: rgb(102, 102, 102);
+    overflow: hidden;
+}
+
+.abacusos .cusos .elemento img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fotoaba{
+    position: absolute;
+    width: 5rem;
+    height: 3rem;
+    background-color: #666;
+    border-radius: 15px 0 15px 0;
+    display: flex;
+    justify-content: center;
+}
+.abacusos .cusos .elemento .fotoaba .ing{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
 }

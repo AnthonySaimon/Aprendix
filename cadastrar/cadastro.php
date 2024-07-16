@@ -27,7 +27,7 @@ $sql = "INSERT INTO usuario (nome, sobrenome, email, senha)
         VALUES ('$nome', '$sobrenome', '$email', '$senha')";
 
 if ($conn->query($sql) === TRUE) {
-    echo "Cadastro realizado com sucesso!";
+    header("Location: ../index.php");
 } else {
     echo "Erro: " . $sql . "<br>" . $conn->error;
 }
