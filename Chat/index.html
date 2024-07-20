@@ -4,9 +4,16 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Aprendix</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel="shortcut icon" href="../imagem/Logo-aprendix.png" type="image/ico" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kodchasan:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
 
 </head>
 
@@ -27,21 +34,20 @@
         <div class="menu">
             <ul>
                 <li>
-                    <a href="../home/index.html">
-                        <ion-icon name="home-outline"></ion-icon>
-                        Home
-                    </a>
-                </li>
-
-                <li>
                     <a href="">
                         <ion-icon name="file-tray-outline"></ion-icon>
                         Biblioteca
                     </a>
                 </li>
+                <li>
+                    <a href="../configuracao/index.html">
+                        <ion-icon name="settings-outline"></ion-icon>
+                        Comfiguração
+                    </a>
+                </li>
 
                 <li>
-                    <a href="../Chat/index.html">
+                    <a href="./index.html">
                         <ion-icon name="chatbox-ellipses-outline"></ion-icon>
                         Chat
                     </a>
@@ -58,46 +64,35 @@
         </div>
     </nav>
 
-    <div class="janelas">
+    <div class="chat-elemento">
 
-        <div class="janelas1">
+        <div class="aba-chat">
+            <div class="conversas">
+                <img src="../imagem/ECG_chat.png" alt="">
+                <ul>
+                    <h2>Nome do Chat<h2>
+                            <li>Criador</li>
+                </ul>
+            </div>
 
-            <a href="" class="caixa">
-                <ion-icon name="person-outline"></ion-icon>
-                Usuario
-            </a>
-
-            <a href="" class="caixa">
-                <ion-icon name="wallet-outline"></ion-icon>
-                Pagamento
-            </a>
-
-            <a href="" class="caixa">
-                <ion-icon name="eye-off-outline"></ion-icon>
-                Senha e Seguranção
-            </a>
-
-            <a href="" class="caixa">
-                <ion-icon name="git-compare-outline"></ion-icon>
-                Conexão
-            </a>
-
-            <a href="" class="caixa">
-                <ion-icon name="file-tray-full-outline"></ion-icon>
-                Historico
+            <a href="../Modelo_base/index.html">
+                <div class="addchat">
+                    <ion-icon name="add-outline"></ion-icon>
+                </div>
             </a>
 
         </div>
-        <div class="janelas2">
+
+        <div class="chat">
 
         </div>
 
     </div>
 
-</body>
 
-<script src='../home/main.js'></script>
+</body>
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script src='../home/main.js'></script>
 
 </html>

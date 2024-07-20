@@ -269,10 +269,9 @@ li {
 .comentarios {
     margin: 1rem 0 0 3rem;
     width: 60%;
-    height: 50rem;
     background-color: #555;
     border-radius: 25px;
-    padding: 1rem;
+    padding: 1rem 0 2rem 2rem;;
 }
 
 .comnome {
@@ -381,7 +380,4 @@ li {
 .buteviar:hover{
     transition: 0.5s;
     background-color: rgb(91, 170, 91);
-}
-.comentario{
-
 }
