@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Courier Gothic', sans-serif;
+    list-style: none;
 }
 
 body {
@@ -136,125 +137,79 @@ body {
 }
 
 
-.chat-elemento {
-    margin: 0.5rem;
-    width: 98.9%;
-    height: 50rem;
-    background-color: #555;
-    border-radius: 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    ;
-}
 
-.aba-chat {
-    width: 20%;
-    min-height: 45rem;
-    background-color: #777;
-    border-radius: 25px;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.aba-chat .conversas {
-    width: 95%;
-    height: 6rem;
-    background-color: #D9D9D9;
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-    margin-top: 1rem;
-}
-
-.aba-chat .conversas img {
-    width: 5rem;
-    height: 5rem;
-    background-color: #fff;
-    border-radius: 17px;
-}
-
-.aba-chat .conversas ul {
-    margin-left: 1rem;
-}
-
-.aba-chat .conversas li {
-    list-style: none;
-    font-size: 1rem;
-}
-
-.aba-chat .conversas h2 {
-    list-style: none;
-    font-size: 1.5rem;
-}
-
-.chat {
-    width: 75%;
-    height: 90%;
-    background-color: #f5f5f5;
-    border-radius: 25px;
-}
-
-.addchat ion-icon {
-    font-size: 4rem;
-    color: white;
-}
-
-
-.addchat {
-    width: 5rem;
-    height: 5rem;
-    background-color: #ccc;
-    border-radius: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1rem;
-}
-.chat .caixachat{
-    width: 50rem;
-    height: 4rem;
-    background-color: #666;
-    border-radius: 15px;
+.avisos{
     position: relative;
+    top: 2rem;
+    left: 9.5%;
+    width: 80%;
+    height: 7rem;
+    background-color: #D9D9D9;
+    border-radius: 25px;
+    z-index: -1;
     display: flex;
     align-items: center;
-    top: 90%;
-    left: 20%;
-    padding: 1rem;
+    align-content: center;
+    flex-wrap: wrap;
+}
+.avisos .celulaDNC{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: center;
+    flex-direction: column;
+    border-right: black solid 0.2rem;
+}
+.avisos .celulaDNC h2{
+    font-size: 2rem;
+}
+.avisos .celulaDNC h3{
+    font-size: 1.3rem;
 }
 
-.input {
-    color: #acacac;
-    background-color: #212121;
-    width: 50rem;
-    height: 40px;
-    padding: 10px;
-    border: 2px solid white;
-    border-radius: 5px;
-  }
-  
-  .input:focus {
-    color: rgb(255, 255, 255);
-    background-color: #212121;
-    outline-color: rgb(255, 255, 255);
-    transition: .1s;
-    transition-property: box-shadow;
-  }
-  .buteviar {
-    margin-left: 1rem;
-    width: 2.5rem;
-    height: 2.5rem;
-    border-radius: 50px;
-    padding: 0.5rem;
-    border: none;
-    background-color: #8b8b8b;
-    cursor: pointer;
-  }
-  .buteviar:hover{
-    transition: 0.5s;
-    background-color: rgb(91, 170, 91);
+
+.avisos .celulaBAN{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: center;
+    flex-direction: column;
+    border-right: black solid 0.2rem;
+}
+.avisos .celulaBAN h2{
+    font-size: 2rem;
+}
+.avisos .celulaBAN h3{
+    font-size: 1.3rem;
+}
+
+
+.avisos .celulaSCT{
+    display: flex;
+    align-items: center;
+    width: 20%;
+    justify-content: center;
+    flex-direction: column;
+    border-right: black solid 0.2rem;
+}
+.avisos .celulaSCT h2{
+    font-size: 2rem;
+}
+.avisos .celulaSCT h3{
+    font-size: 1.3rem;
+}
+
+
+.avisos .celulaUSE{
+    display: flex;
+    align-items: center;
+    width: 35%;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.avisos .celulaUSE h2{
+    font-size: 3.5rem;
+}
+.avisos .celulaUSE h3{
+    font-size: 3rem;
 }
