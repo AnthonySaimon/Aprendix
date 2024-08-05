@@ -138,18 +138,17 @@ body {
     color: #999;
 }
 
-
 .user{
     z-index: 1;
     position: relative;
     width: 85%;
-    height: 100vh;
     background-color: #666;
     top: 4rem;
     left: 8.5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1rem;
 }
 
 .nome{
@@ -194,7 +193,7 @@ body {
 }
 .nomeuser li{ 
     margin-left: 7px;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
 }
 .aba2{
     width: 10rem;

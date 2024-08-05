@@ -1,0 +1,38 @@
+.aba1{
+    margin-top: 1.5rem;
+    width: 43%;
+    height: 30rem;
+    background-color: #666;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+    flex-wrap: wrap;
+}
+.lado2{
+    padding: 0.5rem;
+    border-radius: 25px;
+    background-color: #8a8a8a;
+    width: 38rem;
+    height: 14rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.input-style {
+    margin: 0.5rem;
+    height: 3rem;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    text-decoration: none;
+    background-color: white;  
+  }
+  
+  .input-style:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
