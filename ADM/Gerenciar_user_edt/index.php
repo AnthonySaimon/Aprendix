@@ -70,18 +70,21 @@
          </div>
      </nav>
 
-     <form action="" class="aba1">
+     <form action="../protocolo/userUP.php" class="aba1">
          <div class="lado1">
              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9Etrj7SYknitFM3_TL7O2S1YoU7yswbXBLQ&s" alt="">
          </div>
 
          <div class="lado2">
              <?php foreach ($manager->list_client_by_id($id) as $data) : ?>
+                <input  class="input-style" value="<?= $data['id'] ?>" disabled>
+
                  <input placeholder="Nome" class="input-style" type="text" value="<?= $data['nome'] ?>">
 
                  <input placeholder="SobreNome" class="input-style" type="text" value="<?= $data['sobrenome'] ?>">
 
             <input placeholder=" Email" class="input-style" type="email" value="<?= $data['email'] ?>">
+            <input  class="input-style" value="<?= $data['senha'] ?>" disabled>
 
             <input list=" browsers" name="browser" class="input-style" value="<?= $data['permissao'] ?>">
             <datalist id=" browsers">

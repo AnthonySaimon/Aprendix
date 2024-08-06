@@ -37,5 +37,23 @@ class protocolo extends Conexao
         return $statement->fetchAll();
     }
 
+    public function update_client($data)
+    {
+        $pdo = parent::get_instance();
+        $sql = "UPDATE usuario SET nome = :nome,
+                                   sobrenome = :sobrenome,
+                                   email = :email,
+                                   senha = :senha,
+                                   permissao = :permissao,
+                                   WHERE id = :id";
+                                   
+        var_dump($sql);
+        $statement = $pdo->prepare($sql);
+        foreach ($data as $key => $value) {
+            $statement->bindValue(":$key", $value);
+        }
+        $statement->execute();
+    }
+
 }
 
